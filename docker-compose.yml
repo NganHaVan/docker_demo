@@ -21,7 +21,7 @@ services:
     volumes:
       - /app/node_modules
       - .:/app
-    # override a commend
+    # override a command
     command: ["yarn", "test"]
     # Fix react-scripts error
     stdin_open: true

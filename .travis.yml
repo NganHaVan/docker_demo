@@ -7,3 +7,10 @@ before_install:
 
 script:
   - docker run -e CI=true havan7135/react-docker npm run test -- --coverage
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "$API_KEY"
+  app: react-docker-demo
+  on: master
