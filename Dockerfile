@@ -11,7 +11,8 @@ FROM nginx
 USER root
 ARG PORT
 RUN echo $PORT
-EXPOSE ${PORT}
+EXPOSE 80
+
 # Copy from builder stage to build folder
 # Replace builder with 0 when publishing AWS
 COPY --from=0 /app/build /usr/share/nginx/html
