@@ -7,7 +7,7 @@ RUN yarn install
 COPY . .
 RUN yarn build
 
-FROM nginx
+FROM nginxinc/nginx-unprivileged
 EXPOSE 80
 # Copy from builder stage to build folder
 # Replace builder with 0 when publishing AWS
